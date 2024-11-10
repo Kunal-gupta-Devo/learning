@@ -8,7 +8,9 @@ btn.addEventListener("click",function(){
     for(let i=0;i<6;i++){
         hexValue+=hex[randomNumber()];
         
-    }document.body.style.backgroundColor=hexValue;
+    }
+   document.body.style.backgroundColor=hexValue;
+   console.log(hexValue)
         color.textContent=hexValue
 });
  function randomNumber(){
