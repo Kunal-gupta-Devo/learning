@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defult</title>
+</head>
+<body>
+    
+        <button id="btn" onclick="alert(`my clicked`)">click me</button>
+        <h1 id="head">Iam heading is here</h1>
+        <h2 id="head2">headin2</h2>
+    </ul>
+    <script>
+        // let menu=document.getElementById('menu');
+        // menu.onclick=function(event){
+        //     if(event.target.nodeName !='A') return;
+        //     let href=event.target.getAttribute('href')
+        //     alert(href);
+        //     return false;
+        // }
+
+// let btn=document.getElementById('btn');
+//  let myEvent=new Event("click")
+//  btn.dispatchEvent(myEvent);
+
+
+ let cstmEvent= new Event("here",{bubbles:true})
+ let h1=document.getElementById("head")
+  document.addEventListener("here",(event)=>{alert(`hello here ${event.target}`)})
+   h1.dispatchEvent(cstmEvent);
+   
+
+   let antherEvent= new CustomEvent("hello",{ detail:{name:'kunal'}})
+ let head2=document.getElementById("head2")
+ head2.dispatchEvent(antherEvent)
+ head2.addEventListener("hello",(event)=>{alert(event.detail.name)})
+    </script>
+</body>
+</html>
